@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="55" width="375" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="122" id="ZD8-5U-6f3" customClass="CategoryCell" customModule="Coder_Swag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="122" id="ZD8-5U-6f3" customClass="CategoryCell" customModule="Coder_Swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZD8-5U-6f3" id="qN6-e5-l7h">
@@ -42,7 +42,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="h6F-9o-CVj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="115.66666666666667"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoodies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-zW-XMV">
                                                     <rect key="frame" x="125" y="48" width="125" height="25"/>
@@ -57,10 +57,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="h6F-9o-CVj" secondAttribute="trailing" id="7Tl-c6-eZe"/>
-                                                <constraint firstItem="h6F-9o-CVj" firstAttribute="top" secondItem="qN6-e5-l7h" secondAttribute="top" id="Pep-QS-PPf"/>
+                                                <constraint firstAttribute="bottom" secondItem="h6F-9o-CVj" secondAttribute="bottom" constant="3" id="Elv-Ne-wPj"/>
+                                                <constraint firstItem="h6F-9o-CVj" firstAttribute="top" secondItem="qN6-e5-l7h" secondAttribute="top" constant="3" id="ORU-rw-hVq"/>
                                                 <constraint firstItem="h6F-9o-CVj" firstAttribute="leading" secondItem="qN6-e5-l7h" secondAttribute="leading" id="Q5p-5v-TC3"/>
                                                 <constraint firstItem="V6W-zW-XMV" firstAttribute="centerY" secondItem="qN6-e5-l7h" secondAttribute="centerY" id="YAU-UT-bqS"/>
-                                                <constraint firstAttribute="bottom" secondItem="h6F-9o-CVj" secondAttribute="bottom" id="ne1-jy-EGG"/>
                                                 <constraint firstItem="V6W-zW-XMV" firstAttribute="centerX" secondItem="qN6-e5-l7h" secondAttribute="centerX" id="y1u-JX-3qx"/>
                                             </constraints>
                                         </tableViewCellContentView>
