@@ -43,7 +43,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="h6F-9o-CVj">
-                                                    <rect key="frame" x="0.0" y="3" width="375" height="115.66666666666667"/>
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="116"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="375" id="FyH-hV-cTd"/>
+                                                        <constraint firstAttribute="height" constant="116" id="iJk-qv-5nB"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoodies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-zW-XMV">
                                                     <rect key="frame" x="125" y="48" width="125" height="25"/>
@@ -57,11 +61,11 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="h6F-9o-CVj" secondAttribute="trailing" id="7Tl-c6-eZe"/>
-                                                <constraint firstAttribute="bottom" secondItem="h6F-9o-CVj" secondAttribute="bottom" constant="3" id="Elv-Ne-wPj"/>
-                                                <constraint firstItem="h6F-9o-CVj" firstAttribute="top" secondItem="qN6-e5-l7h" secondAttribute="top" constant="3" id="ORU-rw-hVq"/>
-                                                <constraint firstItem="h6F-9o-CVj" firstAttribute="leading" secondItem="qN6-e5-l7h" secondAttribute="leading" id="Q5p-5v-TC3"/>
+                                                <constraint firstAttribute="bottom" secondItem="h6F-9o-CVj" secondAttribute="bottom" constant="2.6699999999999999" id="CcP-TH-oT7"/>
+                                                <constraint firstItem="h6F-9o-CVj" firstAttribute="top" secondItem="qN6-e5-l7h" secondAttribute="top" constant="3" id="VxH-tc-Q1m"/>
                                                 <constraint firstItem="V6W-zW-XMV" firstAttribute="centerY" secondItem="qN6-e5-l7h" secondAttribute="centerY" id="YAU-UT-bqS"/>
+                                                <constraint firstItem="h6F-9o-CVj" firstAttribute="leading" secondItem="qN6-e5-l7h" secondAttribute="leading" id="hHT-gf-ahA"/>
+                                                <constraint firstAttribute="trailing" secondItem="h6F-9o-CVj" secondAttribute="trailing" id="pdX-gK-cYL"/>
                                                 <constraint firstItem="V6W-zW-XMV" firstAttribute="centerX" secondItem="qN6-e5-l7h" secondAttribute="centerX" id="y1u-JX-3qx"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -87,17 +91,17 @@
                     <navigationItem key="navigationItem" title="CODE SWAG" id="Z1p-D9-PaT"/>
                     <connections>
                         <outlet property="categoryTable" destination="tyQ-at-gMb" id="ILF-1j-jXz"/>
-                        <segue destination="Dts-HX-kTe" kind="show" id="pnC-Nw-foY"/>
+                        <segue destination="Dts-HX-kTe" kind="show" identifier="ProductVC" id="pnC-Nw-foY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000.8" y="492.11822660098522"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductVC-->
         <scene sceneID="3g7-7I-6Xw">
             <objects>
-                <viewController id="Dts-HX-kTe" sceneMemberID="viewController">
+                <viewController id="Dts-HX-kTe" customClass="ProductVC" customModule="Coder_Swag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6w2-eD-R0d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +126,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KJo-dZ-HzC" customClass="ProductCell" customModule="Coder_Swag" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="KJo-dZ-HzC" customClass="ProductCell" customModule="Coder_Swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="179" height="292"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -190,6 +194,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QBG-Lm-OL5"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="9eT-6b-0KF" id="1SZ-iA-AtM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEA-3S-bzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
